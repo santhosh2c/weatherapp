@@ -5,6 +5,7 @@ const geoCode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, '../templates/views'))
@@ -79,6 +80,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000')
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
 })

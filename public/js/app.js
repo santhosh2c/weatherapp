@@ -3,7 +3,7 @@ console.log('client js file')
 
 
 const getForecast = function(address) {
-    fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+    fetch(`/weather?address=${address}`).then((response) => {
     response.json().then((data) => {
         if(data.error){
             msg1.textContent = ''
